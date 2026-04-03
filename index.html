@@ -1,143 +1,79 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deniz Hair Salon | Master Stylists</title>
+    <title>Deniz Hair Salon</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif']
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        body { background-color: #08080a; color: #f0f0f5; overflow-x: hidden; }
-        .nav-link { position: relative; padding: 0.5rem 0; }
-        .nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: #e0b0ff; transition: width 0.3s ease-in-out; }
-        .nav-link:hover::after { width: 100%; }
-        .btn-secondary { background-color: transparent; border: 1px solid #e0b0ff; color: #e0b0ff; padding: 1rem 2rem; border-radius: 9999px; font-weight: 600; transition: all 0.2s ease-in-out; }
-        .btn-secondary:hover { background-color: #e0b0ff; color: #1a1a1f; transform: scale(0.98); }
-        .service-card-light { background: #1a1a1f; border-radius: 1.5rem; padding: 2.5rem; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
-        .section-separator { border-top: 1px solid rgba(255,255,255,0.05); margin-top: 8rem; padding-top: 4rem; }
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
+        
+        body { font-family: 'Space Grotesk', sans-serif; background-color: #0F0F0F; color: #F0F0F0; text-transform: uppercase; }
+        
+        .hero-img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            filter: grayscale(100%) contrast(1.2);
+        }
+        
+        .brutalist-border {
+            border: 2px solid #F0F0F0;
+        }
     </style>
 </head>
-<body class="antialiased font-sans">
+<body class="antialiased selection:bg-white selection:text-black">
 
-    <!-- Navbar (Minimalist Floating) -->
-    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-[#08080a]/80 backdrop-blur-xl rounded-full px-8 py-3 flex items-center gap-8 border border-white/10 shadow-lg shadow-black/20">
-        <div class="text-xl font-serif font-bold uppercase tracking-wide">Deniz</div>
-        <div class="flex items-center gap-6 text-sm font-medium text-zinc-300">
-            <a href="#hero" class="nav-link">Home</a>
-            <a href="#services" class="nav-link">Services</a>
-            <a href="#gallery" class="nav-link">Gallery</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </div>
+    <!-- Nav -->
+    <nav class="flex justify-between items-center p-6 border-b-2 border-white">
+        <div class="text-2xl font-bold tracking-tighter">DENIZ <br> HAIRSALON</div>
+        <a href="mailto:contact@denizhairsalon.com" class="brutalist-border px-6 py-2 hover:bg-white hover:text-black transition-colors font-bold tracking-widest text-sm">BOOK APPOINTMENT</a>
     </nav>
 
-    <!-- Hero Section (Editorial Luxury) -->
-    <section id="hero" class="min-h-[100dvh] flex items-center px-6 relative overflow-hidden bg-gradient-to-br from-[#08080a] via-[#1a1a1f] to-[#08080a]">
-        <div class="absolute inset-0 z-0 opacity-15 bg-blend-overlay" style="background-image: url('https://images.pexels.com/photos/3993123/pexels-photo-3993123.jpeg'); background-size: cover; background-position: center;"></div>
-        
-        <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16 relative z-10 py-20">
-            <div class="flex flex-col justify-center">
-                <span class="inline-block px-4 py-1 rounded-full bg-white/10 text-white text-xs uppercase tracking-wider font-medium mb-6">Signature Styling</span>
-                <h1 class="font-serif text-7xl md:text-8xl lg:text-[9rem] font-bold leading-[0.9] tracking-tighter mb-8 text-white">
-                    MASTER<br>YOUR<br>LOOK.
-                </h1>
-                <p class="text-zinc-300 text-lg max-w-[55ch] mb-10 leading-relaxed">Experience unparalleled craftsmanship. We transform hair into a work of art, reflecting your unique identity.</p>
-                <div class="flex items-center gap-4">
-                    <button class="btn-secondary flex items-center gap-2">
-                        Explore Services <i data-lucide="scissors" class="w-5 h-5"></i>
-                    </button>
-                </div>
+    <!-- Hero -->
+    <header class="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh] border-b-2 border-white">
+        <div class="p-12 flex flex-col justify-center border-b-2 lg:border-b-0 lg:border-r-2 border-white">
+            <h1 class="text-7xl md:text-9xl font-bold tracking-tighter leading-[0.85] mb-8">PRECISION<br>CUTS.</h1>
+            <p class="text-xl font-light tracking-widest max-w-md mb-12">
+                ELEVATING YOUR STYLE WITH EXPERT CRAFTSMANSHIP. LOCATED IN THE HEART OF THE CITY.
+            </p>
+            <div>
+                <a href="mailto:contact@denizhairsalon.com" class="inline-block bg-white text-black px-12 py-4 font-bold tracking-widest text-lg hover:bg-gray-300 transition-colors">CONTACT US</a>
             </div>
-            <div class="hidden md:flex items-center justify-center">
-                <div class="w-full max-w-lg aspect-[4/5] overflow-hidden rounded-[3rem] ring-1 ring-white/10 shadow-2xl shadow-purple-500/20">
-                    <img src="https://images.pexels.com/photos/3993123/pexels-photo-3993123.jpeg" class="w-full h-full object-cover" alt="Stylist working on hair" />
-                </div>
+        </div>
+        <div class="relative overflow-hidden h-[50vh] lg:h-auto">
+            <img src="https://images.pexels.com/photos/29189919/pexels-photo-29189919.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800" alt="Stylist Working" class="hero-img">
+            <div class="absolute bottom-4 right-4 bg-black text-white px-4 py-2 text-xs tracking-widest brutalist-border">EST. QUALITY</div>
+        </div>
+    </header>
+
+    <!-- Services / Contact -->
+    <section class="grid grid-cols-1 md:grid-cols-3">
+        <div class="p-12 border-b-2 md:border-b-0 md:border-r-2 border-white flex flex-col justify-between">
+            <h2 class="text-3xl font-bold mb-8">SERVICES</h2>
+            <ul class="space-y-4 font-light tracking-wider">
+                <li class="flex justify-between"><span>HAIRCUT</span> <span>—</span></li>
+                <li class="flex justify-between"><span>COLORING</span> <span>—</span></li>
+                <li class="flex justify-between"><span>STYLING</span> <span>—</span></li>
+                <li class="flex justify-between"><span>TREATMENTS</span> <span>—</span></li>
+            </ul>
+        </div>
+        <div class="p-12 border-b-2 md:border-b-0 md:border-r-2 border-white">
+            <h2 class="text-3xl font-bold mb-8">HOURS</h2>
+            <ul class="space-y-4 font-light tracking-wider">
+                <li class="flex justify-between"><span>TUE-FRI</span> <span>10AM-8PM</span></li>
+                <li class="flex justify-between"><span>SAT</span> <span>9AM-6PM</span></li>
+                <li class="flex justify-between"><span>SUN-MON</span> <span>CLOSED</span></li>
+            </ul>
+        </div>
+        <div class="p-12 bg-white text-black flex flex-col justify-between">
+            <h2 class="text-3xl font-bold mb-8">INQUIRIES</h2>
+            <div>
+                <p class="font-bold tracking-widest mb-2">EMAIL</p>
+                <a href="mailto:contact@denizhairsalon.com" class="text-lg underline underline-offset-4 hover:opacity-50">CONTACT@DENIZHAIRSALON.COM</a>
             </div>
         </div>
     </section>
 
-    <!-- Services Section (Soft Structuralism Grid) -->
-    <section id="services" class="py-32 px-6 bg-[#08080a]">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="font-serif text-5xl md:text-7xl font-bold tracking-tighter mb-16 text-white text-center">OUR<br>EXPERTISE.</h2>
-            <div class="grid lg:grid-cols-2 gap-8">
-                <!-- Service Card 1 (Wider) -->
-                <div class="lg:col-span-1 service-card-light flex flex-col items-start">
-                    <i data-lucide="cut" class="w-10 h-10 text-blue-400 mb-6"></i>
-                    <h3 class="font-serif text-3xl font-bold mb-4 text-white">Precision Haircuts & Styling</h3>
-                    <p class="text-zinc-400 leading-relaxed flex-grow">Customized cuts and contemporary styling to perfect your look.</p>
-                    <div class="mt-8 text-sm font-bold text-blue-300 tracking-wide">From 0</div>
-                </div>
-                <!-- Service Card 2 -->
-                <div class="lg:col-span-1 service-card-light flex flex-col items-start">
-                    <i data-lucide="palette" class="w-10 h-10 text-pink-400 mb-6"></i>
-                    <h3 class="font-serif text-3xl font-bold mb-4 text-white">Advanced Color Techniques</h3>
-                    <p class="text-zinc-400 leading-relaxed flex-grow">Balayage, highlights, and full-color transformations with lasting vibrancy.</p>
-                    <div class="mt-8 text-sm font-bold text-pink-300 tracking-wide">From 50</div>
-                </div>
-                <!-- Service Card 3 (New Grid Item) -->
-                <div class="lg:col-span-2 service-card-light flex flex-col items-start">
-                    <i data-lucide="sparkles" class="w-10 h-10 text-emerald-400 mb-6"></i>
-                    <h3 class="font-serif text-3xl font-bold mb-4 text-white">Restorative Hair Treatments</h3>
-                    <p class="text-zinc-400 leading-relaxed flex-grow">Deep conditioning, keratin smoothing, and scalp therapies for ultimate hair health and shine.</p>
-                    <div class="mt-8 text-sm font-bold text-emerald-300 tracking-wide">From 0</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section (Z-Axis Cascade) -->
-    <section id="gallery" class="py-24 px-6 bg-[#08080a] relative overflow-hidden">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
-            <div class="relative w-full aspect-[3/4] overflow-hidden rounded-[2rem] ring-1 ring-white/10 shadow-2xl shadow-purple-500/10 hover:-translate-y-2 hover:rotate-1 transition-all duration-500 group">
-                <img src="https://images.pexels.com/photos/7755225/pexels-photo-7755225.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Hair styling example 1" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div class="absolute bottom-8 left-8 text-white font-serif text-3xl font-bold">Modern Balayage</div>
-            </div>
-            <div class="relative w-full aspect-[3/4] overflow-hidden rounded-[2rem] ring-1 ring-white/10 shadow-2xl shadow-blue-500/10 lg:mt-16 hover:-translate-y-2 hover:-rotate-1 transition-all duration-500 group">
-                <img src="https://images.pexels.com/photos/8468125/pexels-photo-8468125.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Hair styling example 2" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div class="absolute bottom-8 left-8 text-white font-serif text-3xl font-bold">Elegant Updo</div>
-            </div>
-            <div class="relative w-full aspect-[3/4] overflow-hidden rounded-[2rem] ring-1 ring-white/10 shadow-2xl shadow-green-500/10 lg:mt-32 hover:-translate-y-2 hover:rotate-1 transition-all duration-500 group">
-                <img src="https://images.pexels.com/photos/7755473/pexels-photo-7755473.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Hair styling example 3" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div class="absolute bottom-8 left-8 text-white font-serif text-3xl font-bold">Precision Cut</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="py-32 px-6 bg-[#0d0d0f] border-t border-white/5">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-16">
-            <div class="text-center lg:text-left">
-                <div class="font-serif text-4xl font-bold tracking-wide uppercase mb-6 text-white">Deniz Hair Salon</div>
-                <p class="text-zinc-500 max-w-md leading-relaxed">Elevating your style with unparalleled hair artistry and care.</p>
-            </div>
-            <div class="text-zinc-400 text-lg space-y-4 text-center lg:text-right">
-                <p>appointments@denizhairsalon.com</p>
-                <p>+1 (646) 777-8888</p>
-                <p>456 Hairline Drive, New York, NY 10011</p>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto text-center text-zinc-600 text-sm mt-20">
-            &copy; 2026 Deniz Hair Salon. All rights reserved.
-        }
-    </footer>
-
-    <script>lucide.createIcons();</script>
 </body>
 </html>
