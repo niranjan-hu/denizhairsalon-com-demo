@@ -20,19 +20,36 @@
         .brutalist-border {
             border: 2px solid #F0F0F0;
         }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            border-bottom: 2px solid #F0F0F0;
+            padding: 1rem 0;
+            background: #F0F0F0;
+            color: #0F0F0F;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-white selection:text-black">
 
     <!-- Nav -->
-    <nav class="flex justify-between items-center p-6 border-b-2 border-white">
+    <nav class="flex justify-between items-center p-6 border-b-2 border-white sticky top-0 bg-[#0F0F0F] z-50">
         <div class="text-2xl font-bold tracking-tighter">DENIZ <br> HAIRSALON</div>
         <a href="mailto:contact@denizhairsalon.com" class="brutalist-border px-6 py-2 hover:bg-white hover:text-black transition-colors font-bold tracking-widest text-sm">BOOK APPOINTMENT</a>
     </nav>
 
     <!-- Hero -->
-    <header class="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh] border-b-2 border-white">
-        <div class="p-12 flex flex-col justify-center border-b-2 lg:border-b-0 lg:border-r-2 border-white">
+    <header class="grid grid-cols-1 lg:grid-cols-2 min-h-[85vh] border-b-2 border-white">
+        <div class="p-8 lg:p-16 flex flex-col justify-center border-b-2 lg:border-b-0 lg:border-r-2 border-white">
             <h1 class="text-7xl md:text-9xl font-bold tracking-tighter leading-[0.85] mb-8">PRECISION<br>CUTS.</h1>
             <p class="text-xl font-light tracking-widest max-w-md mb-12">
                 ELEVATING YOUR STYLE WITH EXPERT CRAFTSMANSHIP. LOCATED IN THE HEART OF THE CITY.
@@ -42,38 +59,91 @@
             </div>
         </div>
         <div class="relative overflow-hidden h-[50vh] lg:h-auto">
-            <img src="https://images.pexels.com/photos/29189919/pexels-photo-29189919.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800" alt="Stylist Working" class="hero-img">
+            <img src="https://images.pexels.com/photos/29189919/pexels-photo-29189919.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800" alt="Stylist Working" class="hero-img hover:scale-105 transition-transform duration-1000">
             <div class="absolute bottom-4 right-4 bg-black text-white px-4 py-2 text-xs tracking-widest brutalist-border">EST. QUALITY</div>
         </div>
     </header>
 
-    <!-- Services / Contact -->
-    <section class="grid grid-cols-1 md:grid-cols-3">
-        <div class="p-12 border-b-2 md:border-b-0 md:border-r-2 border-white flex flex-col justify-between">
-            <h2 class="text-3xl font-bold mb-8">SERVICES</h2>
-            <ul class="space-y-4 font-light tracking-wider">
-                <li class="flex justify-between"><span>HAIRCUT</span> <span>—</span></li>
-                <li class="flex justify-between"><span>COLORING</span> <span>—</span></li>
-                <li class="flex justify-between"><span>STYLING</span> <span>—</span></li>
-                <li class="flex justify-between"><span>TREATMENTS</span> <span>—</span></li>
-            </ul>
+    <!-- Marquee -->
+    <div class="marquee-container text-4xl font-bold tracking-tighter">
+        <div class="marquee-content">
+            HAIRCUTS • COLORING • STYLING • HIGHLIGHTS • BALAYAGE • TREATMENTS • BLOWOUTS • HAIRCUTS • COLORING • STYLING • HIGHLIGHTS • BALAYAGE • TREATMENTS • BLOWOUTS •
         </div>
-        <div class="p-12 border-b-2 md:border-b-0 md:border-r-2 border-white">
-            <h2 class="text-3xl font-bold mb-8">HOURS</h2>
-            <ul class="space-y-4 font-light tracking-wider">
-                <li class="flex justify-between"><span>TUE-FRI</span> <span>10AM-8PM</span></li>
-                <li class="flex justify-between"><span>SAT</span> <span>9AM-6PM</span></li>
-                <li class="flex justify-between"><span>SUN-MON</span> <span>CLOSED</span></li>
-            </ul>
-        </div>
-        <div class="p-12 bg-white text-black flex flex-col justify-between">
-            <h2 class="text-3xl font-bold mb-8">INQUIRIES</h2>
-            <div>
-                <p class="font-bold tracking-widest mb-2">EMAIL</p>
-                <a href="mailto:contact@denizhairsalon.com" class="text-lg underline underline-offset-4 hover:opacity-50">CONTACT@DENIZHAIRSALON.COM</a>
+    </div>
+
+    <!-- About Section -->
+    <section class="p-8 lg:p-16 border-b-2 border-white grid grid-cols-1 md:grid-cols-2 gap-12">
+        <h2 class="text-4xl md:text-6xl font-bold tracking-tighter leading-none">THE<br>PHILOSOPHY</h2>
+        <p class="text-xl md:text-2xl font-light tracking-widest leading-relaxed">
+            AT DENIZ HAIRSALON, WE BELIEVE IN RAW AUTHENTICITY. NO FLUFF. JUST PRECISION, ARTISTRY, AND A DEEP UNDERSTANDING OF HAIR MECHANICS. WE STRIP AWAY THE UNNECESSARY TO FOCUS ON WHAT MATTERS: YOU AND YOUR STYLE.
+        </p>
+    </section>
+
+    <!-- Services Detailed -->
+    <section class="border-b-2 border-white">
+        <div class="grid grid-cols-1 md:grid-cols-3 border-b-2 border-white">
+            <!-- Service 1 -->
+            <div class="border-b-2 md:border-b-0 md:border-r-2 border-white group">
+                <div class="h-64 overflow-hidden border-b-2 border-white">
+                    <img src="https://images.pexels.com/photos/3993320/pexels-photo-3993320.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=600" alt="Haircut" class="w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-3xl font-bold mb-4 tracking-tighter">HAIRCUT</h3>
+                    <p class="font-light tracking-wider text-gray-400">EXPERT SHEAR AND CLIPPER WORK TAILORED TO YOUR BONE STRUCTURE.</p>
+                </div>
+            </div>
+            <!-- Service 2 -->
+            <div class="border-b-2 md:border-b-0 md:border-r-2 border-white group">
+                <div class="h-64 overflow-hidden border-b-2 border-white">
+                    <img src="https://images.pexels.com/photos/3992875/pexels-photo-3992875.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=600" alt="Coloring" class="w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-3xl font-bold mb-4 tracking-tighter">COLORING</h3>
+                    <p class="font-light tracking-wider text-gray-400">FROM BALAYAGE TO FULL CORRECTION, WE MASTER THE CHEMISTRY OF COLOR.</p>
+                </div>
+            </div>
+            <!-- Service 3 -->
+            <div class="group">
+                <div class="h-64 overflow-hidden border-b-2 border-white">
+                    <img src="https://images.pexels.com/photos/29096366/pexels-photo-29096366.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=600&w=600" alt="Styling" class="w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-3xl font-bold mb-4 tracking-tighter">STYLING</h3>
+                    <p class="font-light tracking-wider text-gray-400">FLAWLESS BLOWOUTS AND EVENT STYLING ENGINEERED TO LAST.</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Info / Hours -->
+    <section class="grid grid-cols-1 md:grid-cols-2">
+        <div class="p-12 border-b-2 md:border-b-0 md:border-r-2 border-white bg-white text-black">
+            <h2 class="text-4xl font-bold mb-8 tracking-tighter">OPERATIONAL HOURS</h2>
+            <ul class="space-y-6 font-bold tracking-widest text-lg">
+                <li class="flex justify-between border-b-2 border-black pb-2"><span>TUE-FRI</span> <span>10:00 AM - 8:00 PM</span></li>
+                <li class="flex justify-between border-b-2 border-black pb-2"><span>SATURDAY</span> <span>09:00 AM - 6:00 PM</span></li>
+                <li class="flex justify-between border-b-2 border-black pb-2 text-gray-500"><span>SUN-MON</span> <span>CLOSED</span></li>
+            </ul>
+        </div>
+        <div class="p-12 flex flex-col justify-between">
+            <h2 class="text-4xl font-bold mb-8 tracking-tighter">LOCATION & CONTACT</h2>
+            <div class="space-y-8">
+                <div>
+                    <p class="font-bold tracking-widest text-gray-500 mb-2">EMAIL</p>
+                    <a href="mailto:contact@denizhairsalon.com" class="text-2xl underline underline-offset-8 hover:text-gray-400 transition">CONTACT@DENIZHAIRSALON.COM</a>
+                </div>
+                <div>
+                    <p class="font-bold tracking-widest text-gray-500 mb-2">STUDIO</p>
+                    <p class="text-xl tracking-wider">NEW YORK, NY<br>BOOKING REQUIRED</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-6 border-t-2 border-white text-center text-sm font-bold tracking-widest bg-[#0F0F0F]">
+        &copy; 2026 DENIZ HAIRSALON. ALL RIGHTS RESERVED.
+    </footer>
 
 </body>
 </html>
